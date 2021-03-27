@@ -1,0 +1,50 @@
+<mat-toolbar color="danger">
+    <mat-toolbar-row>
+        <span> myTODO</span>
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px">
+                <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+                <li><a routerLink="/create" routerLinkActive="active">Create</a></li>
+<li>
+    <a mat-list-item routerLinkActive="active" routerLink="/">My Todo</a>
+
+
+</li>
+            </ul>
+            </div>
+        </mat-toolbar-row>
+        </mat-toolbar>
+        <div class="">
+            <h4 class="">Create Todo </h4>
+            
+            <form class="form">
+                <div class="row">
+                    <div class="col-md-6">
+                <div class="form-group">
+                   
+                        <div class="col-md-12">
+                            <label>Date<br></label>
+                            <input type="text" [(ngModel)]="createDetails.date" class="form-control" id="email" size="15"  style="height: 40px;">
+                        </div>
+                        </div>
+                </div>
+                <div class="col-md-6">
+                <div class="form-group">
+                        <div class="col-md-12">
+                                <label>Title<br></label>
+                                <input type="text" [(ngModel)]="createDetails.title" class="form-control" id="email" size="15"  style="height: 40px;">
+                                </div>
+                                </div>
+                    
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                                <label>ToDo Detail<br></label>
+                                <textarea  [(ngModel)]="createDetails.detail" class="form-control" rows="5" id="comment"></textarea>
+                                </div>
+                                </div>
+                              <button><span class="load" (click)="loadTodo()">Load</span></button>
+                              <button> <span class="load" (click)="submitF()">create</span></button>
+                    </form>
+                    </div>
